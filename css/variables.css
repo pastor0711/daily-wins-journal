@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Crimson+Text:ital,wght@0,400;1,600&display=swap');
+
+:root {
+    /* Typography */
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-script: 'Crimson Text', Georgia, serif;
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s ease;
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-lift: 0 8px 30px rgba(0, 0, 0, 0.12);
+    --shadow-glow: 0 0 20px rgba(255, 182, 193, 0.3);
+
+    /* Borders */
+    --radius: 16px;
+    --radius-md: 12px;
+    --radius-sm: 8px;
+    --radius-full: 50px;
+}
+
+/* Theme: Dawn */
+[data-theme="dawn"] {
+    --bg-primary: linear-gradient(135deg, #FFE5B4 0%, #FFB6C1 30%, #FFDEE9 70%, #FFF 100%);
+    --bg-secondary: rgba(255, 255, 255, 0.7);
+    --bg-glass: rgba(255, 255, 255, 0.25);
+    --text-primary: #4A4A4A;
+    --text-secondary: #8B7B6B;
+    --text-accent: #D4816B;
+    --accent-primary: #FFB6C1;
+    --accent-secondary: #FFE5B4;
+    --particle-color: rgba(255, 182, 193, 0.6);
+}
+
+/* Theme: Dusk */
+[data-theme="dusk"] {
+    --bg-primary: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #4A5568 100%);
+    --bg-secondary: rgba(102, 126, 234, 0.15);
+    --bg-glass: rgba(102, 126, 234, 0.2);
+    --text-primary: #F7FAFC;
+    --text-secondary: #E2E8F0;
+    --text-accent: #B794F6;
+    --accent-primary: #9D50BB;
+    --accent-secondary: #667eea;
+    --particle-color: rgba(183, 148, 246, 0.5);
+}
+
+/* Theme: Minimal */
+[data-theme="minimal"] {
+    --bg-primary: linear-gradient(135deg, #FAFAFA 0%, #E8E8E8 100%);
+    --bg-secondary: rgba(255, 255, 255, 0.9);
+    --bg-glass: rgba(255, 255, 255, 0.4);
+    --text-primary: #2D3748;
+    --text-secondary: #718096;
+    --text-accent: #4A5568;
+    --accent-primary: #A0AEC0;
+    --accent-secondary: #E2E8F0;
+    --particle-color: rgba(160, 174, 192, 0.4);
+}
+
+/* Theme: Nature */
+[data-theme="nature"] {
+    --bg-primary: linear-gradient(135deg, #A8E6CF 0%, #DCEDC1 50%, #FFD3B6 100%);
+    --bg-secondary: rgba(220, 237, 193, 0.6);
+    --bg-glass: rgba(168, 230, 207, 0.25);
+    --text-primary: #2F4F2F;
+    --text-secondary: #556B2F;
+    --text-accent: #8FBC8F;
+    --accent-primary: #A8E6CF;
+    --accent-secondary: #DCEDC1;
+    --particle-color: rgba(168, 230, 207, 0.6);
+}
+
+/* Theme: Cosmic */
+[data-theme="cosmic"] {
+    --bg-primary: linear-gradient(135deg, #0F2027 0%, #203A43 50%, #2C5364 100%);
+    --bg-secondary: rgba(32, 58, 67, 0.8);
+    --bg-glass: rgba(44, 83, 100, 0.3);
+    --text-primary: #E6F3FF;
+    --text-secondary: #B8D4E6;
+    --text-accent: #7EC8E3;
+    --accent-primary: #4A90A4;
+    --accent-secondary: #2C5364;
+    --particle-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Theme: Ocean Breeze - Calming teal waters */
+[data-theme="ocean"] {
+    --bg-primary: linear-gradient(135deg, #0A2342 0%, #1B4965 40%, #5FA8D3 100%);
+    --bg-secondary: rgba(27, 73, 101, 0.6);
+    --bg-glass: rgba(95, 168, 211, 0.2);
+    --text-primary: #E8F4F8;
+    --text-secondary: #B8D8E8;
+    --text-accent: #62B6CB;
+    --accent-primary: #62B6CB;
+    --accent-secondary: #1B4965;
+    --particle-color: rgba(98, 182, 203, 0.6);
+}
+
+/* Theme: Sunset Glow - Warm evening sky */
+[data-theme="sunset"] {
+    --bg-primary: linear-gradient(135deg, #2D1B4E 0%, #8B2F5C 30%, #FF6B6B 60%, #FFC75F 100%);
+    --bg-secondary: rgba(255, 107, 107, 0.15);
+    --bg-glass: rgba(255, 142, 83, 0.2);
+    --text-primary: #FFF5E6;
+    --text-secondary: #FFD4B8;
+    --text-accent: #FF8E53;
+    --accent-primary: #FF8E53;
+    --accent-secondary: #FFC75F;
+    --particle-color: rgba(255, 199, 95, 0.6);
+}
+
+/* Theme: Lavender Dream - Soft purple tranquility */
+[data-theme="lavender"] {
+    --bg-primary: linear-gradient(135deg, #E8D5E7 0%, #C9A9E0 40%, #9B72CF 80%, #7B5BB5 100%);
+    --bg-secondary: rgba(201, 169, 224, 0.5);
+    --bg-glass: rgba(155, 114, 207, 0.2);
+    --text-primary: #3D2952;
+    --text-secondary: #5C4173;
+    --text-accent: #7B5BB5;
+    --accent-primary: #B794C0;
+    --accent-secondary: #E8D5E7;
+    --particle-color: rgba(155, 114, 207, 0.5);
+}

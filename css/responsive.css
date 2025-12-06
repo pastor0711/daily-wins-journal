@@ -1,0 +1,246 @@
+/* Tablet Breakpoint (768px) */
+@media (max-width: 768px) {
+    .view {
+        padding: 1rem;
+    }
+
+    .app-title {
+        font-size: 1.8rem;
+    }
+
+    .add-card {
+        margin-bottom: 2rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .recent-grid,
+    .entries-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .view-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .timeline-actions {
+        flex-direction: column;
+    }
+
+    .modal-content {
+        max-height: 90vh;
+        border-radius: var(--radius) var(--radius) 0 0;
+    }
+
+    .settings-content {
+        max-width: 100%;
+    }
+
+    .theme-swatches {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .modal-footer {
+        flex-direction: column-reverse;
+    }
+
+    .modal-footer button {
+        width: 100%;
+    }
+
+    /* Ensure delete buttons are always visible on mobile */
+    .entry-actions {
+        opacity: 1;
+        top: 0.75rem;
+        right: 0.75rem;
+    }
+
+    .entry-delete-btn {
+        width: 36px;
+        height: 36px;
+        background: rgba(255, 100, 100, 0.9);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 12px rgba(255, 100, 100, 0.4);
+    }
+
+    .entry-delete-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .entry-card {
+        padding-right: 3.5rem;
+    }
+
+    /* Lock Screen Mobile */
+    .lock-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .lock-title {
+        font-size: 1.5rem;
+    }
+
+    .pin-input {
+        width: 50px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .pin-inputs {
+        gap: 0.75rem;
+    }
+
+    .calm-code-modal {
+        max-height: 90vh;
+    }
+}
+
+/* Small Mobile Breakpoint (480px) */
+@media (max-width: 480px) {
+    .app-title {
+        font-size: 1.5rem;
+    }
+
+    .add-card-text {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .empty-icon {
+        font-size: 3rem;
+    }
+
+    .empty-title {
+        font-size: 1.5rem;
+    }
+
+    .pin-input {
+        width: 45px;
+        height: 55px;
+        font-size: 1.3rem;
+    }
+
+    .pin-inputs {
+        gap: 0.5rem;
+    }
+
+    .header-actions {
+        gap: 0.5rem;
+    }
+
+    .icon-btn {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Touch Device Adjustments */
+@media (hover: none) and (pointer: coarse) {
+    .entry-actions {
+        opacity: 1;
+    }
+
+    .entry-delete-btn {
+        background: rgba(255, 100, 100, 0.8);
+        backdrop-filter: blur(10px);
+    }
+
+    /* Increase touch targets */
+    .btn-primary,
+    .btn-secondary,
+    .btn-ghost {
+        min-height: 48px;
+    }
+
+    .icon-btn {
+        min-width: 48px;
+        min-height: 48px;
+    }
+
+    .tag-bubble,
+    .emoji-btn {
+        min-height: 44px;
+    }
+
+    /* Remove hover effects that don't work well on touch */
+    .entry-card:hover {
+        transform: none;
+    }
+
+    .entry-card:active {
+        transform: scale(0.98);
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover {
+        transform: none;
+    }
+
+    .btn-primary:active,
+    .btn-secondary:active {
+        transform: scale(0.98);
+    }
+}
+
+/* Landscape Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .lock-content {
+        padding: 1.5rem;
+    }
+
+    .lock-title {
+        font-size: 1.3rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .lock-message {
+        margin-bottom: 1rem;
+    }
+
+    .lock-icon {
+        margin-bottom: 1rem;
+    }
+
+    .lock-icon svg {
+        width: 36px;
+        height: 36px;
+    }
+
+    .pin-input {
+        width: 45px;
+        height: 50px;
+    }
+
+    .modal-content {
+        max-height: 95vh;
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .glass {
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+    }
+}
+
+/* Dark Mode Preference (for minimal theme) */
+@media (prefers-color-scheme: dark) {
+    [data-theme="minimal"] {
+        --bg-primary: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%);
+        --bg-secondary: rgba(40, 40, 40, 0.9);
+        --bg-glass: rgba(60, 60, 60, 0.4);
+        --text-primary: #E8E8E8;
+        --text-secondary: #A0A0A0;
+        --text-accent: #888888;
+        --accent-primary: #555555;
+        --accent-secondary: #444444;
+        --particle-color: rgba(150, 150, 150, 0.3);
+    }
+}
