@@ -55,6 +55,7 @@ class DailyWinsApp {
         } else {
             this.UI.showView('dashboard');
             this.UI.renderDashboard(this.entries);
+            this.attachEntryCardListeners('recentEntries');
             this.startAutoLockTimer();
         }
 
@@ -194,9 +195,9 @@ class DailyWinsApp {
         this.attachEntryCardListeners('recentEntries');
     }
 
-    showTimeline() {
+    showTimeline(filter = '', search = '') {
         this.UI.showView('timeline');
-        this.UI.renderTimeline(this.entries, this.tags);
+        this.UI.renderTimeline(this.entries, this.tags, filter, search);
         this.attachEntryCardListeners('entriesContainer');
     }
 
