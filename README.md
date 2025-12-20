@@ -101,7 +101,6 @@ A serene, visually captivating digital journal for capturing daily wins and mome
 daily-wins-journal/
 ├── index.html              # Main HTML structure
 ├── styles.css              # CSS module imports
-├── app.js                  # Original (backup)
 ├── README.md               # Documentation
 │
 ├── js/                     # JavaScript modules
