@@ -69,7 +69,17 @@ window.DailyWins.Modal = {
     },
 
     setupPinInputs(container, onComplete) {
-        const inputs = container.querySelectorAll('.pin-input');
+        const el = typeof container === 'string' ? document.getElementById(container) : container;
+        if (!el) {
+            console.error('setupPinInputs: Container not found', container);
+            return;
+        }
+
+        const inputs = el.querySelectorAll('.pin-input');
+        if (inputs.length === 0) {
+            console.error('setupPinInputs: No .pin-input found in container', el);
+            return;
+        }
 
         inputs.forEach((input, index) => {
             input.addEventListener('input', (e) => {
@@ -101,12 +111,16 @@ window.DailyWins.Modal = {
     },
 
     getPinFromContainer(container) {
-        const inputs = container.querySelectorAll('.pin-input');
+        const el = typeof container === 'string' ? document.getElementById(container) : container;
+        if (!el) return '';
+        const inputs = el.querySelectorAll('.pin-input');
         return Array.from(inputs).map(i => i.value).join('');
     },
 
     clearPinInputs(container) {
-        const inputs = container.querySelectorAll('.pin-input');
+        const el = typeof container === 'string' ? document.getElementById(container) : container;
+        if (!el) return;
+        const inputs = el.querySelectorAll('.pin-input');
         inputs.forEach(input => input.value = '');
         if (inputs[0]) inputs[0].focus();
     },
